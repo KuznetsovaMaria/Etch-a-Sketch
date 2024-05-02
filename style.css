@@ -1,0 +1,28 @@
+* {
+    --border: 1px solid black;
+    --border-radius: 4px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 32px;
+}
+
+#gridContainer {
+    width: 502px; 
+    /* 502px = 5 squares * 100px each + 2px for 2 borders */
+    height: 502px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    border: var(--border);
+    border-radius: var(--border-radius);
+    background-color: #C4F8CB;
+    width: 100px;
+    height: 100px;
+}
+
