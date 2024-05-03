@@ -21,8 +21,16 @@ body {
 .square {
     border: var(--border);
     border-radius: var(--border-radius);
-    background-color: #C4F8CB;
+    background-color: #B4CCFF;
     width: 100px;
     height: 100px;
+}
+
+.squareColored {
+    background-color: #944072;
+}
+
+button {
+    margin-bottom: 12px;
 }
 

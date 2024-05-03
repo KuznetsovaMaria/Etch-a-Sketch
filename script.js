@@ -12,11 +12,14 @@ function drawGrid() {
 }
 
 function drawSquare() {
-    const square = document.createElement('div');
+    let square = document.createElement('div');
     square.classList.add('square');
     gridContainer.appendChild(square);
 }
 
-
-
-
+gridContainer.addEventListener('mouseover', (event) => {
+    if (event.target.classList.contains("square")) {
+        let square = event.target;
+        square.classList.add('squareColored');
+    }
+})
