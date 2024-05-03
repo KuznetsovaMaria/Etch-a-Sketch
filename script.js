@@ -20,6 +20,11 @@ function drawSquare() {
 gridContainer.addEventListener('mouseover', (event) => {
     if (event.target.classList.contains("square")) {
         let square = event.target;
-        square.classList.add('squareColored');
+        changeSquareColor(square);
     }
 })
+
+function changeSquareColor(square) {
+    square.classList.add('squareColored');
+}
+
