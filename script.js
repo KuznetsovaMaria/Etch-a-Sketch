@@ -2,6 +2,9 @@ const gridContainer = document.getElementById('gridContainer');
 const btnCreateGrid = document.getElementById('btnCreateGrid');
 
 btnCreateGrid.addEventListener('click', () => {
+    if (gridContainer.lastChild) {
+        removeGrid();
+    }
     drawGrid();
 });
 
@@ -26,5 +29,12 @@ gridContainer.addEventListener('mouseover', (event) => {
 
 function changeSquareColor(square) {
     square.classList.add('squareColored');
+}
+
+function removeGrid() {
+    for (let squareNum = 25; squareNum > 0; squareNum--) {
+        gridContainer.removeChild(gridContainer.lastChild);
+        console.log(squareNum);
+    }
 }
 
