@@ -9,8 +9,7 @@ body {
 }
 
 #gridContainer {
-    width: 502px; 
-    /* 502px = 5 squares * 100px each + 2px for 2 borders */
+    width: 502px;
     height: 502px;
     border: var(--border);
     border-radius: var(--border-radius);
@@ -22,8 +21,6 @@ body {
     border: var(--border);
     border-radius: var(--border-radius);
     background-color: #B4CCFF;
-    width: 100px;
-    height: 100px;
 }
 
 .squareColored {
