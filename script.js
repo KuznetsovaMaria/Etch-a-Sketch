@@ -1,10 +1,12 @@
 const gridContainer = document.getElementById('gridContainer');
 const btnCreateGrid = document.getElementById('btnCreateGrid');
 
-let numSquaresOnOneSide = prompt('How many squares on one side would you like me to draw in your grid?')
-let numSquaresTotal  = numSquaresOnOneSide**2;
+let numSquaresOnOneSide;
+let numSquaresTotal;
 
 btnCreateGrid.addEventListener('click', () => {
+    numSquaresOnOneSide = document.querySelector('input').value;
+    numSquaresTotal = numSquaresOnOneSide**2;
     if (gridContainer.hasChildNodes()) {
         removeGrid(gridContainer);
     }
@@ -25,6 +27,12 @@ function drawSquare() {
     gridContainer.appendChild(square);
 }
 
+function removeGrid(parent) {
+    while(parent.hasChildNodes()) {
+        gridContainer.removeChild(gridContainer.lastChild);
+    }
+}
+
 gridContainer.addEventListener('mouseover', (event) => {
     if (event.target.classList.contains("square")) {
         let square = event.target;
@@ -36,9 +44,4 @@ function changeSquareColor(square) {
     square.classList.add('squareColored');
 }
 
-function removeGrid(parent) {
-    while(parent.hasChildNodes()) {
-        gridContainer.removeChild(gridContainer.lastChild);
-    }
-}
 
