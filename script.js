@@ -10,7 +10,14 @@ btnCreateGrid.addEventListener('click', () => {
     if (gridContainer.hasChildNodes()) {
         removeGrid(gridContainer);
     }
-    drawGrid();
+    if (numSquaresOnOneSide >=0 
+        && numSquaresOnOneSide <=20
+        && Number.isInteger(parseInt(numSquaresOnOneSide))) {
+            drawGrid();
+    } else {
+        alert('Invalid number');
+    }
+    
 });
 
 function drawGrid() {
