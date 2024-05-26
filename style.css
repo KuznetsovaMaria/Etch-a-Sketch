@@ -31,3 +31,33 @@ button {
     margin-bottom: 12px;
 }
 
+.popupBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(184, 184, 184, 0.5);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.warningPopup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgb(226, 191, 202);
+    padding: 12px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    width: fit-content;
+    height: fit-content;
+}
+
+.popupBackground.active {
+    opacity: 1;
+    pointer-events: all;
+}

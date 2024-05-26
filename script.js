@@ -1,5 +1,7 @@
 const gridContainer = document.getElementById('gridContainer');
 const btnCreateGrid = document.getElementById('btnCreateGrid');
+const popupBG = document.querySelector('.popupBackground');
+const warningPopup = document.querySelector('.warningPopup');
 
 let numSquaresOnOneSide;
 let numSquaresTotal;
@@ -15,10 +17,19 @@ btnCreateGrid.addEventListener('click', () => {
         && Number.isInteger(parseInt(numSquaresOnOneSide))) {
             drawGrid();
     } else {
-        alert('Invalid number');
+        displayWarningPopup();
     }
-    
 });
+
+function displayWarningPopup() {
+    popupBG.classList.add('active');
+}
+document.addEventListener('click', (e) => {
+    if (e.target == popupBG) {
+        popupBG.classList.remove('active');
+    }
+})
+
 
 function drawGrid() {
     for (let squaresNum = 1; squaresNum <= numSquaresTotal; squaresNum++) {
