@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'kode-mono';
+    src: url(./assets/fonts/Kode-Regular.woff2);
+    font-weight: 400;
+}
+
 * {
     --border: 1px solid black;
     --border-radius: 4px;
@@ -6,9 +12,20 @@
 
 body {
     margin: 32px;
+    font-family: kode-mono;
+    font-weight: 400;
+    line-height: 3vh;
+}
+
+input, button {
+    font-family: kode-mono;
+    font-weight: 400;
+    padding: 4px 8px;
+    margin: 4px 8px;
 }
 
 #gridContainer {
+    margin: 12px;
     width: 502px;
     height: 502px;
     border: var(--border);
